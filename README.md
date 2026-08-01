@@ -329,3 +329,12 @@ ORDER BY month, driver;
 - `EXTRACT(EPOCH FROM ...)` is PostgreSQL syntax; for MySQL use `TIMESTAMPDIFF(SECOND, pickup_at, dropoff_at) / 3600.0`, and for SQLite use `(JULIANDAY(dropoff_at) - JULIANDAY(pickup_at)) * 24`.
 - Driver display name (`Chris H`) is built as first name + last-name initial to match the sample report format.
 - A composite index on `ride_event(id_ride, description)` is recommended so both CTEs can seek directly to the relevant rows instead of scanning the full event table.
+
+### Sample Query Output
+
+Screenshot of the report running against seeded data:
+
+![Trip duration report output](docs/screenshots/reporting_output.png)
+
+*(Save your screenshot to `docs/screenshots/reporting_output.png` — or update the path above to wherever you place it — then this will render automatically on GitHub.)*
+
