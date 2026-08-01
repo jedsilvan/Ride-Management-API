@@ -13,10 +13,9 @@ A RESTful API built with **Django** and **Django REST Framework (DRF)** for mana
 5. [Data Models](#data-models)
 6. [Authentication & Permissions](#authentication--permissions)
 7. [API Reference](#api-reference)
-8. [Performance & Query Optimization](#performance--query-optimization)
-9. [Testing](#testing)
-10. [Design Decisions & Challenges](#design-decisions--challenges)
-11. [Bonus: SQL Reporting Query](#bonus-sql-reporting-query)
+8. [Testing](#testing)
+9. [Design Decisions & Challenges](#design-decisions--challenges)
+10. [Bonus: SQL Reporting Query](#bonus-sql-reporting-query)
 
 ---
 
@@ -122,15 +121,13 @@ python manage.py runserver
 ### Obtaining an API Token
 
 ```bash
-curl -X POST http://localhost:8000/api-token-auth/ \
-  -d "username=<admin_username>&password=<admin_password>"
+curl -X POST http://localhost:8000/api-token-auth/ -d "username=<admin_username>&password=<admin_password>"
 ```
 
 Use the returned token in subsequent requests:
 
 ```bash
-curl http://localhost:8000/api/rides/ \
-  -H "Authorization: Token <your_token>"
+curl http://localhost:8000/api/rides/ -H "Authorization: Token <your_token>"
 ```
 
 ---
@@ -242,90 +239,6 @@ Standard admin-only CRUD, handled by the ViewSet's default actions.
 Full CRUD, same as `Ride` — `GET` (list/detail), `POST`, `PUT`/`PATCH`, `DELETE`, all admin-only with the same pagination scheme.
 
 ---
-
-## Performance & Query Optimization
-
-This is the core engineering challenge of the assessment, so it's worth documenting explicitly.
-
-### Goal
-Return a paginated ride list — including each ride's rider, driver, and *today's* ride events — in **2 queries (3 with the pagination count query)**, without ever loading a ride's full `RideEvent` history.
-
-### How it's achieved
-
-1. **`select_related('id_rider', 'id_driver')`**
-   Rider and driver are `ForeignKey` (single-valued) relations, so `select_related` performs a SQL `JOIN` and pulls them into the *same* query as the ride list — no extra round trip.
-
-2. **`Prefetch` with a filtered, scoped queryset for `todays_ride_events`**
-   `RideEvent` is a reverse FK (one ride → many events), so it can't be joined via `select_related`. Instead, a `Prefetch` object is used with a queryset pre-filtered to `created_at >= now() - timedelta(hours=24)`:
-
-   ```python
-   from django.db.models import Prefetch
-   from django.utils import timezone
-   from datetime import timedelta
-
-   last_24h = timezone.now() - timedelta(hours=24)
-
-   queryset = (
-       Ride.objects
-       .select_related("id_rider", "id_driver")
-       .prefetch_related(
-           Prefetch(
-               "ride_events",
-               queryset=RideEvent.objects.filter(created_at__gte=last_24h),
-               to_attr="todays_ride_events",
-           )
-       )
-   )
-   ```
-
-   Because the `Prefetch` queryset is filtered *before* Django issues it, Django runs exactly **one additional query** — `SELECT ... FROM ride_event WHERE id_ride IN (<page's ride ids>) AND created_at >= <cutoff>` — regardless of how large the `RideEvent` table is. The full history is never touched.
-
-3. **Query count**
-   - Query 1: `SELECT COUNT(*) FROM ride ...` (pagination)
-   - Query 2: `SELECT ride.*, rider.*, driver.* FROM ride JOIN user ... LIMIT/OFFSET` (the page of rides + joined rider/driver)
-   - Query 3: `SELECT * FROM ride_event WHERE id_ride IN (...) AND created_at >= ...` (today's events for just this page)
-
-   This holds constant whether the `Ride` table has 1,000 or 100,000,000 rows.
-
-4. **Sorting**
-   - **By `pickup_time`:** a plain `.order_by('pickup_time')` against an **indexed** column — O(log n) via the B-tree index, no extra query.
-   - **By distance:** rather than pulling all rows into Python to compute distance, the API annotates the queryset with a database-computed distance expression using the equirectangular approximation (fast, index-friendly, sufficiently accurate for city-scale ride distances) via `ExpressionWrapper` and `F()`:
-
-     ```python
-     from django.db.models import F, ExpressionWrapper, FloatField
-     from django.db.models.functions import Power, Sqrt
-
-     queryset = queryset.annotate(
-         distance=ExpressionWrapper(
-             Sqrt(
-                 Power(F("pickup_latitude") - pickup_lat, 2)
-                 + Power(F("pickup_longitude") - pickup_lng, 2)
-             ),
-             output_field=FloatField(),
-         )
-     ).order_by("distance")
-     ```
-
-     This pushes the calculation into the database engine as part of the same query — it is not a Python-side sort, and it composes cleanly with `LIMIT`/`OFFSET` pagination. In production, this would be swapped for a PostGIS `GeometryField` with a GiST index for true great-circle distance and index-accelerated nearest-neighbor lookups; the ORM-level abstraction here (an "ordering strategy" resolved in `filters.py`) means swapping the implementation doesn't change the API surface.
-
-5. **Pagination**
-   All of the above compose with DRF's `PageNumberPagination`, so `LIMIT`/`OFFSET` (or keyset pagination, see Design Decisions) is applied at the SQL level in query 2 — the API never materializes more rows than one page's worth.
-
----
-
-## Troubleshooting
-
-**`AttributeError: 'super' object has no attribute 'dicts'` (usually on `/admin/.../add/`)**
-This is a known Django/Python version-compatibility issue, not a bug in this project. It occurs when Django's template `Context.__copy__()` runs on Python 3.13+ with a Django release that predates the fix for that Python version. This project pins `Django==5.2.16` (LTS, supports Python 3.10–3.14) specifically to avoid this — if you still hit it, run `pip install -r requirements.txt --upgrade` to make sure the pin actually took effect, and double check with `python -c "import django; print(django.get_version())"`.
-
-**`CommandError: You appear not to have the 'sqlite3' program installed`**
-This is the `sqlite3` CLI binary, not the Python module (Django doesn't need the CLI to run). Either install it (`brew install sqlite3` / `apt-get install sqlite3`) or skip `dbshell` and use `python manage.py shell` instead.
-
-**`django.db.utils.OperationalError: no such table: ...`**
-Migrations haven't been generated/applied. Run `python manage.py makemigrations rides` then `python manage.py migrate`.
-
-**`psycopg2-binary` fails to build during `pip install`**
-Usually means pip is trying to compile from source. Try `pip install --upgrade pip setuptools wheel` first, or switch to SQLite locally by leaving `DB_ENGINE` unset in `.env` (Postgres is only needed for production).
 
 ## Testing
 
