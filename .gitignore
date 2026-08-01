@@ -1,0 +1,13 @@
+# Ignore collected static files
+/staticfiles/
+
+# Ignore all .pyc and __pycache__ files
+*.py[cod]
+__pycache__/
+
+# Ignore database files
+/db.sqlite3
+/db.splite3
+
+# Ignore environment-specific settings
+.env
