@@ -87,7 +87,7 @@ wingz/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/wingz-ride-api.git
+git clone https://github.com/jedsilvan/Ride-Management-API.git
 cd wingz-ride-api
 
 # 2. Create and activate a virtual environment
