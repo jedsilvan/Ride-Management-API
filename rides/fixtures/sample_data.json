@@ -1,0 +1,124 @@
+[
+  {
+    "model": "rides.user",
+    "pk": 1,
+    "fields": {
+      "role": "rider",
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "email": "jane@example.com",
+      "phone_number": "555-0101"
+    }
+  },
+  {
+    "model": "rides.user",
+    "pk": 2,
+    "fields": {
+      "role": "rider",
+      "first_name": "Mark",
+      "last_name": "Lee",
+      "email": "mark@example.com",
+      "phone_number": "555-0102"
+    }
+  },
+  {
+    "model": "rides.user",
+    "pk": 3,
+    "fields": {
+      "role": "driver",
+      "first_name": "Chris",
+      "last_name": "Howard",
+      "email": "chris@example.com",
+      "phone_number": "555-0201"
+    }
+  },
+  {
+    "model": "rides.user",
+    "pk": 4,
+    "fields": {
+      "role": "driver",
+      "first_name": "Randy",
+      "last_name": "Wilson",
+      "email": "randy@example.com",
+      "phone_number": "555-0202"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 1,
+    "fields": {
+      "status": "en-route",
+      "id_rider": 1,
+      "id_driver": 3,
+      "pickup_latitude": 34.0522,
+      "pickup_longitude": -118.2437,
+      "dropoff_latitude": 34.1478,
+      "dropoff_longitude": -118.1445,
+      "pickup_time": "2026-07-31T14:05:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 2,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 3,
+      "pickup_latitude": 34.0407,
+      "pickup_longitude": -118.2468,
+      "dropoff_latitude": 34.0928,
+      "dropoff_longitude": -118.3287,
+      "pickup_time": "2026-07-30T09:15:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 3,
+    "fields": {
+      "status": "pickup",
+      "id_rider": 1,
+      "id_driver": 4,
+      "pickup_latitude": 34.0195,
+      "pickup_longitude": -118.4912,
+      "dropoff_latitude": 34.0736,
+      "dropoff_longitude": -118.4004,
+      "pickup_time": "2026-07-29T18:40:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 1,
+    "fields": {
+      "id_ride": 1,
+      "description": "Status changed to en-route",
+      "created_at": "2026-07-31T14:05:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 2,
+    "fields": {
+      "id_ride": 2,
+      "description": "Status changed to pickup",
+      "created_at": "2026-07-30T09:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 3,
+    "fields": {
+      "id_ride": 2,
+      "description": "Status changed to dropoff",
+      "created_at": "2026-07-30T10:02:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 4,
+    "fields": {
+      "id_ride": 3,
+      "description": "Status changed to pickup",
+      "created_at": "2026-07-29T18:40:00Z"
+    }
+  }
+]
