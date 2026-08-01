@@ -334,7 +334,4 @@ ORDER BY month, driver;
 
 Screenshot of the report running against seeded data:
 
-![Trip duration report output](docs/screenshots/reporting_output.png)
-
-*(Save your screenshot to `docs/screenshots/reporting_output.png` — or update the path above to wherever you place it — then this will render automatically on GitHub.)*
-
+<img width="583" height="619" alt="image" src="https://github.com/user-attachments/assets/50321a0d-5f58-4664-bc38-6eecb2582396" />
