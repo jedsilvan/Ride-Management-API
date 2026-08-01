@@ -1,7 +1,3 @@
--- SQLite-compatible version of docs/reporting.sql
--- Count of trips whose Pickup -> Dropoff duration exceeded 1 hour,
--- grouped by month and driver.
-
 WITH pickup_events AS (
     SELECT
         id_ride_id AS id_ride,

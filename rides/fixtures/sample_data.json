@@ -44,17 +44,28 @@
     }
   },
   {
+    "model": "rides.user",
+    "pk": 5,
+    "fields": {
+      "role": "driver",
+      "first_name": "Howard",
+      "last_name": "Yang",
+      "email": "howard@example.com",
+      "phone_number": "555-0203"
+    }
+  },
+  {
     "model": "rides.ride",
     "pk": 1,
     "fields": {
-      "status": "en-route",
+      "status": "dropoff",
       "id_rider": 1,
       "id_driver": 3,
-      "pickup_latitude": 34.0522,
-      "pickup_longitude": -118.2437,
-      "dropoff_latitude": 34.1478,
-      "dropoff_longitude": -118.1445,
-      "pickup_time": "2026-07-31T14:05:00Z"
+      "pickup_latitude": 34.01,
+      "pickup_longitude": -118.01,
+      "dropoff_latitude": 34.11,
+      "dropoff_longitude": -118.11,
+      "pickup_time": "2024-01-02T06:00:00Z"
     }
   },
   {
@@ -64,25 +75,655 @@
       "status": "dropoff",
       "id_rider": 2,
       "id_driver": 3,
-      "pickup_latitude": 34.0407,
-      "pickup_longitude": -118.2468,
-      "dropoff_latitude": 34.0928,
-      "dropoff_longitude": -118.3287,
-      "pickup_time": "2026-07-30T09:15:00Z"
+      "pickup_latitude": 34.02,
+      "pickup_longitude": -118.02,
+      "dropoff_latitude": 34.120000000000005,
+      "dropoff_longitude": -118.11999999999999,
+      "pickup_time": "2024-01-04T07:00:00Z"
     }
   },
   {
     "model": "rides.ride",
     "pk": 3,
     "fields": {
-      "status": "pickup",
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 3,
+      "pickup_latitude": 34.03,
+      "pickup_longitude": -118.03,
+      "dropoff_latitude": 34.13,
+      "dropoff_longitude": -118.13,
+      "pickup_time": "2024-01-06T08:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 4,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 3,
+      "pickup_latitude": 34.04,
+      "pickup_longitude": -118.04,
+      "dropoff_latitude": 34.14,
+      "dropoff_longitude": -118.14,
+      "pickup_time": "2024-01-08T09:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 5,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 5,
+      "pickup_latitude": 34.05,
+      "pickup_longitude": -118.05,
+      "dropoff_latitude": 34.15,
+      "dropoff_longitude": -118.14999999999999,
+      "pickup_time": "2024-01-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 6,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 5,
+      "pickup_latitude": 34.06,
+      "pickup_longitude": -118.06,
+      "dropoff_latitude": 34.160000000000004,
+      "dropoff_longitude": -118.16,
+      "pickup_time": "2024-01-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 7,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 5,
+      "pickup_latitude": 34.07,
+      "pickup_longitude": -118.07,
+      "dropoff_latitude": 34.17,
+      "dropoff_longitude": -118.16999999999999,
+      "pickup_time": "2024-01-06T08:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 8,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 5,
+      "pickup_latitude": 34.08,
+      "pickup_longitude": -118.08,
+      "dropoff_latitude": 34.18,
+      "dropoff_longitude": -118.17999999999999,
+      "pickup_time": "2024-01-08T09:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 9,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 5,
+      "pickup_latitude": 34.09,
+      "pickup_longitude": -118.09,
+      "dropoff_latitude": 34.190000000000005,
+      "dropoff_longitude": -118.19,
+      "pickup_time": "2024-01-10T10:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 10,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 4,
+      "pickup_latitude": 34.0,
+      "pickup_longitude": -118.0,
+      "dropoff_latitude": 34.1,
+      "dropoff_longitude": -118.1,
+      "pickup_time": "2024-01-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 11,
+    "fields": {
+      "status": "dropoff",
       "id_rider": 1,
       "id_driver": 4,
-      "pickup_latitude": 34.0195,
-      "pickup_longitude": -118.4912,
-      "dropoff_latitude": 34.0736,
-      "dropoff_longitude": -118.4004,
-      "pickup_time": "2026-07-29T18:40:00Z"
+      "pickup_latitude": 34.01,
+      "pickup_longitude": -118.01,
+      "dropoff_latitude": 34.11,
+      "dropoff_longitude": -118.11,
+      "pickup_time": "2024-01-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 12,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 3,
+      "pickup_latitude": 34.02,
+      "pickup_longitude": -118.02,
+      "dropoff_latitude": 34.120000000000005,
+      "dropoff_longitude": -118.11999999999999,
+      "pickup_time": "2024-02-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 13,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 3,
+      "pickup_latitude": 34.03,
+      "pickup_longitude": -118.03,
+      "dropoff_latitude": 34.13,
+      "dropoff_longitude": -118.13,
+      "pickup_time": "2024-02-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 14,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 3,
+      "pickup_latitude": 34.04,
+      "pickup_longitude": -118.04,
+      "dropoff_latitude": 34.14,
+      "dropoff_longitude": -118.14,
+      "pickup_time": "2024-02-06T08:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 15,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 3,
+      "pickup_latitude": 34.05,
+      "pickup_longitude": -118.05,
+      "dropoff_latitude": 34.15,
+      "dropoff_longitude": -118.14999999999999,
+      "pickup_time": "2024-02-08T09:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 16,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 3,
+      "pickup_latitude": 34.06,
+      "pickup_longitude": -118.06,
+      "dropoff_latitude": 34.160000000000004,
+      "dropoff_longitude": -118.16,
+      "pickup_time": "2024-02-10T10:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 17,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 3,
+      "pickup_latitude": 34.07,
+      "pickup_longitude": -118.07,
+      "dropoff_latitude": 34.17,
+      "dropoff_longitude": -118.16999999999999,
+      "pickup_time": "2024-02-12T11:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 18,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 3,
+      "pickup_latitude": 34.08,
+      "pickup_longitude": -118.08,
+      "dropoff_latitude": 34.18,
+      "dropoff_longitude": -118.17999999999999,
+      "pickup_time": "2024-02-14T12:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 19,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 5,
+      "pickup_latitude": 34.09,
+      "pickup_longitude": -118.09,
+      "dropoff_latitude": 34.190000000000005,
+      "dropoff_longitude": -118.19,
+      "pickup_time": "2024-02-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 20,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 5,
+      "pickup_latitude": 34.0,
+      "pickup_longitude": -118.0,
+      "dropoff_latitude": 34.1,
+      "dropoff_longitude": -118.1,
+      "pickup_time": "2024-02-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 21,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 5,
+      "pickup_latitude": 34.01,
+      "pickup_longitude": -118.01,
+      "dropoff_latitude": 34.11,
+      "dropoff_longitude": -118.11,
+      "pickup_time": "2024-02-06T08:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 22,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 5,
+      "pickup_latitude": 34.02,
+      "pickup_longitude": -118.02,
+      "dropoff_latitude": 34.120000000000005,
+      "dropoff_longitude": -118.11999999999999,
+      "pickup_time": "2024-02-08T09:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 23,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 5,
+      "pickup_latitude": 34.03,
+      "pickup_longitude": -118.03,
+      "dropoff_latitude": 34.13,
+      "dropoff_longitude": -118.13,
+      "pickup_time": "2024-02-10T10:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 24,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 3,
+      "pickup_latitude": 34.04,
+      "pickup_longitude": -118.04,
+      "dropoff_latitude": 34.14,
+      "dropoff_longitude": -118.14,
+      "pickup_time": "2024-03-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 25,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 3,
+      "pickup_latitude": 34.05,
+      "pickup_longitude": -118.05,
+      "dropoff_latitude": 34.15,
+      "dropoff_longitude": -118.14999999999999,
+      "pickup_time": "2024-03-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 26,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 5,
+      "pickup_latitude": 34.06,
+      "pickup_longitude": -118.06,
+      "dropoff_latitude": 34.160000000000004,
+      "dropoff_longitude": -118.16,
+      "pickup_time": "2024-03-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 27,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 5,
+      "pickup_latitude": 34.07,
+      "pickup_longitude": -118.07,
+      "dropoff_latitude": 34.17,
+      "dropoff_longitude": -118.16999999999999,
+      "pickup_time": "2024-03-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 28,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 4,
+      "pickup_latitude": 34.08,
+      "pickup_longitude": -118.08,
+      "dropoff_latitude": 34.18,
+      "dropoff_longitude": -118.17999999999999,
+      "pickup_time": "2024-03-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 29,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 4,
+      "pickup_latitude": 34.09,
+      "pickup_longitude": -118.09,
+      "dropoff_latitude": 34.190000000000005,
+      "dropoff_longitude": -118.19,
+      "pickup_time": "2024-03-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 30,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 4,
+      "pickup_latitude": 34.0,
+      "pickup_longitude": -118.0,
+      "dropoff_latitude": 34.1,
+      "dropoff_longitude": -118.1,
+      "pickup_time": "2024-03-06T08:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 31,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 4,
+      "pickup_latitude": 34.01,
+      "pickup_longitude": -118.01,
+      "dropoff_latitude": 34.11,
+      "dropoff_longitude": -118.11,
+      "pickup_time": "2024-03-08T09:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 32,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 4,
+      "pickup_latitude": 34.02,
+      "pickup_longitude": -118.02,
+      "dropoff_latitude": 34.120000000000005,
+      "dropoff_longitude": -118.11999999999999,
+      "pickup_time": "2024-03-10T10:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 33,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 4,
+      "pickup_latitude": 34.03,
+      "pickup_longitude": -118.03,
+      "dropoff_latitude": 34.13,
+      "dropoff_longitude": -118.13,
+      "pickup_time": "2024-03-12T11:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 34,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 4,
+      "pickup_latitude": 34.04,
+      "pickup_longitude": -118.04,
+      "dropoff_latitude": 34.14,
+      "dropoff_longitude": -118.14,
+      "pickup_time": "2024-03-14T12:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 35,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 4,
+      "pickup_latitude": 34.05,
+      "pickup_longitude": -118.05,
+      "dropoff_latitude": 34.15,
+      "dropoff_longitude": -118.14999999999999,
+      "pickup_time": "2024-03-16T13:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 36,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 4,
+      "pickup_latitude": 34.06,
+      "pickup_longitude": -118.06,
+      "dropoff_latitude": 34.160000000000004,
+      "dropoff_longitude": -118.16,
+      "pickup_time": "2024-03-18T14:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 37,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 4,
+      "pickup_latitude": 34.07,
+      "pickup_longitude": -118.07,
+      "dropoff_latitude": 34.17,
+      "dropoff_longitude": -118.16999999999999,
+      "pickup_time": "2024-03-20T15:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 38,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 4,
+      "pickup_latitude": 34.08,
+      "pickup_longitude": -118.08,
+      "dropoff_latitude": 34.18,
+      "dropoff_longitude": -118.17999999999999,
+      "pickup_time": "2024-03-22T16:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 39,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 5,
+      "pickup_latitude": 34.09,
+      "pickup_longitude": -118.09,
+      "dropoff_latitude": 34.190000000000005,
+      "dropoff_longitude": -118.19,
+      "pickup_time": "2024-04-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 40,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 5,
+      "pickup_latitude": 34.0,
+      "pickup_longitude": -118.0,
+      "dropoff_latitude": 34.1,
+      "dropoff_longitude": -118.1,
+      "pickup_time": "2024-04-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 41,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 5,
+      "pickup_latitude": 34.01,
+      "pickup_longitude": -118.01,
+      "dropoff_latitude": 34.11,
+      "dropoff_longitude": -118.11,
+      "pickup_time": "2024-04-06T08:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 42,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 5,
+      "pickup_latitude": 34.02,
+      "pickup_longitude": -118.02,
+      "dropoff_latitude": 34.120000000000005,
+      "dropoff_longitude": -118.11999999999999,
+      "pickup_time": "2024-04-08T09:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 43,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 5,
+      "pickup_latitude": 34.03,
+      "pickup_longitude": -118.03,
+      "dropoff_latitude": 34.13,
+      "dropoff_longitude": -118.13,
+      "pickup_time": "2024-04-10T10:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 44,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 5,
+      "pickup_latitude": 34.04,
+      "pickup_longitude": -118.04,
+      "dropoff_latitude": 34.14,
+      "dropoff_longitude": -118.14,
+      "pickup_time": "2024-04-12T11:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 45,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 5,
+      "pickup_latitude": 34.05,
+      "pickup_longitude": -118.05,
+      "dropoff_latitude": 34.15,
+      "dropoff_longitude": -118.14999999999999,
+      "pickup_time": "2024-04-14T12:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 46,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 4,
+      "pickup_latitude": 34.06,
+      "pickup_longitude": -118.06,
+      "dropoff_latitude": 34.160000000000004,
+      "dropoff_longitude": -118.16,
+      "pickup_time": "2024-04-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 47,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 1,
+      "id_driver": 4,
+      "pickup_latitude": 34.07,
+      "pickup_longitude": -118.07,
+      "dropoff_latitude": 34.17,
+      "dropoff_longitude": -118.16999999999999,
+      "pickup_time": "2024-04-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.ride",
+    "pk": 48,
+    "fields": {
+      "status": "dropoff",
+      "id_rider": 2,
+      "id_driver": 4,
+      "pickup_latitude": 34.08,
+      "pickup_longitude": -118.08,
+      "dropoff_latitude": 34.18,
+      "dropoff_longitude": -118.17999999999999,
+      "pickup_time": "2024-04-06T08:00:00Z"
     }
   },
   {
@@ -90,17 +731,17 @@
     "pk": 1,
     "fields": {
       "id_ride": 1,
-      "description": "Status changed to en-route",
-      "created_at": "2026-07-31T14:05:00Z"
+      "description": "Status changed to pickup",
+      "created_at": "2024-01-02T06:00:00Z"
     }
   },
   {
     "model": "rides.rideevent",
     "pk": 2,
     "fields": {
-      "id_ride": 2,
-      "description": "Status changed to pickup",
-      "created_at": "2026-07-30T09:15:00Z"
+      "id_ride": 1,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-01-02T07:15:00Z"
     }
   },
   {
@@ -108,17 +749,845 @@
     "pk": 3,
     "fields": {
       "id_ride": 2,
-      "description": "Status changed to dropoff",
-      "created_at": "2026-07-30T10:02:00Z"
+      "description": "Status changed to pickup",
+      "created_at": "2024-01-04T07:00:00Z"
     }
   },
   {
     "model": "rides.rideevent",
     "pk": 4,
     "fields": {
+      "id_ride": 2,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-01-04T08:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 5,
+    "fields": {
       "id_ride": 3,
       "description": "Status changed to pickup",
-      "created_at": "2026-07-29T18:40:00Z"
+      "created_at": "2024-01-06T08:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 6,
+    "fields": {
+      "id_ride": 3,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-01-06T10:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 7,
+    "fields": {
+      "id_ride": 4,
+      "description": "Status changed to pickup",
+      "created_at": "2024-01-08T09:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 8,
+    "fields": {
+      "id_ride": 4,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-01-08T11:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 9,
+    "fields": {
+      "id_ride": 5,
+      "description": "Status changed to pickup",
+      "created_at": "2024-01-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 10,
+    "fields": {
+      "id_ride": 5,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-01-02T07:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 11,
+    "fields": {
+      "id_ride": 6,
+      "description": "Status changed to pickup",
+      "created_at": "2024-01-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 12,
+    "fields": {
+      "id_ride": 6,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-01-04T08:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 13,
+    "fields": {
+      "id_ride": 7,
+      "description": "Status changed to pickup",
+      "created_at": "2024-01-06T08:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 14,
+    "fields": {
+      "id_ride": 7,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-01-06T10:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 15,
+    "fields": {
+      "id_ride": 8,
+      "description": "Status changed to pickup",
+      "created_at": "2024-01-08T09:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 16,
+    "fields": {
+      "id_ride": 8,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-01-08T11:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 17,
+    "fields": {
+      "id_ride": 9,
+      "description": "Status changed to pickup",
+      "created_at": "2024-01-10T10:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 18,
+    "fields": {
+      "id_ride": 9,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-01-10T13:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 19,
+    "fields": {
+      "id_ride": 10,
+      "description": "Status changed to pickup",
+      "created_at": "2024-01-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 20,
+    "fields": {
+      "id_ride": 10,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-01-02T07:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 21,
+    "fields": {
+      "id_ride": 11,
+      "description": "Status changed to pickup",
+      "created_at": "2024-01-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 22,
+    "fields": {
+      "id_ride": 11,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-01-04T08:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 23,
+    "fields": {
+      "id_ride": 12,
+      "description": "Status changed to pickup",
+      "created_at": "2024-02-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 24,
+    "fields": {
+      "id_ride": 12,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-02-02T07:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 25,
+    "fields": {
+      "id_ride": 13,
+      "description": "Status changed to pickup",
+      "created_at": "2024-02-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 26,
+    "fields": {
+      "id_ride": 13,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-02-04T08:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 27,
+    "fields": {
+      "id_ride": 14,
+      "description": "Status changed to pickup",
+      "created_at": "2024-02-06T08:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 28,
+    "fields": {
+      "id_ride": 14,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-02-06T10:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 29,
+    "fields": {
+      "id_ride": 15,
+      "description": "Status changed to pickup",
+      "created_at": "2024-02-08T09:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 30,
+    "fields": {
+      "id_ride": 15,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-02-08T11:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 31,
+    "fields": {
+      "id_ride": 16,
+      "description": "Status changed to pickup",
+      "created_at": "2024-02-10T10:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 32,
+    "fields": {
+      "id_ride": 16,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-02-10T13:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 33,
+    "fields": {
+      "id_ride": 17,
+      "description": "Status changed to pickup",
+      "created_at": "2024-02-12T11:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 34,
+    "fields": {
+      "id_ride": 17,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-02-12T12:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 35,
+    "fields": {
+      "id_ride": 18,
+      "description": "Status changed to pickup",
+      "created_at": "2024-02-14T12:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 36,
+    "fields": {
+      "id_ride": 18,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-02-14T13:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 37,
+    "fields": {
+      "id_ride": 19,
+      "description": "Status changed to pickup",
+      "created_at": "2024-02-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 38,
+    "fields": {
+      "id_ride": 19,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-02-02T07:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 39,
+    "fields": {
+      "id_ride": 20,
+      "description": "Status changed to pickup",
+      "created_at": "2024-02-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 40,
+    "fields": {
+      "id_ride": 20,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-02-04T08:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 41,
+    "fields": {
+      "id_ride": 21,
+      "description": "Status changed to pickup",
+      "created_at": "2024-02-06T08:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 42,
+    "fields": {
+      "id_ride": 21,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-02-06T10:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 43,
+    "fields": {
+      "id_ride": 22,
+      "description": "Status changed to pickup",
+      "created_at": "2024-02-08T09:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 44,
+    "fields": {
+      "id_ride": 22,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-02-08T11:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 45,
+    "fields": {
+      "id_ride": 23,
+      "description": "Status changed to pickup",
+      "created_at": "2024-02-10T10:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 46,
+    "fields": {
+      "id_ride": 23,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-02-10T13:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 47,
+    "fields": {
+      "id_ride": 24,
+      "description": "Status changed to pickup",
+      "created_at": "2024-03-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 48,
+    "fields": {
+      "id_ride": 24,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-03-02T07:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 49,
+    "fields": {
+      "id_ride": 25,
+      "description": "Status changed to pickup",
+      "created_at": "2024-03-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 50,
+    "fields": {
+      "id_ride": 25,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-03-04T08:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 51,
+    "fields": {
+      "id_ride": 26,
+      "description": "Status changed to pickup",
+      "created_at": "2024-03-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 52,
+    "fields": {
+      "id_ride": 26,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-03-02T07:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 53,
+    "fields": {
+      "id_ride": 27,
+      "description": "Status changed to pickup",
+      "created_at": "2024-03-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 54,
+    "fields": {
+      "id_ride": 27,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-03-04T08:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 55,
+    "fields": {
+      "id_ride": 28,
+      "description": "Status changed to pickup",
+      "created_at": "2024-03-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 56,
+    "fields": {
+      "id_ride": 28,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-03-02T07:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 57,
+    "fields": {
+      "id_ride": 29,
+      "description": "Status changed to pickup",
+      "created_at": "2024-03-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 58,
+    "fields": {
+      "id_ride": 29,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-03-04T08:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 59,
+    "fields": {
+      "id_ride": 30,
+      "description": "Status changed to pickup",
+      "created_at": "2024-03-06T08:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 60,
+    "fields": {
+      "id_ride": 30,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-03-06T10:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 61,
+    "fields": {
+      "id_ride": 31,
+      "description": "Status changed to pickup",
+      "created_at": "2024-03-08T09:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 62,
+    "fields": {
+      "id_ride": 31,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-03-08T11:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 63,
+    "fields": {
+      "id_ride": 32,
+      "description": "Status changed to pickup",
+      "created_at": "2024-03-10T10:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 64,
+    "fields": {
+      "id_ride": 32,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-03-10T13:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 65,
+    "fields": {
+      "id_ride": 33,
+      "description": "Status changed to pickup",
+      "created_at": "2024-03-12T11:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 66,
+    "fields": {
+      "id_ride": 33,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-03-12T12:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 67,
+    "fields": {
+      "id_ride": 34,
+      "description": "Status changed to pickup",
+      "created_at": "2024-03-14T12:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 68,
+    "fields": {
+      "id_ride": 34,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-03-14T13:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 69,
+    "fields": {
+      "id_ride": 35,
+      "description": "Status changed to pickup",
+      "created_at": "2024-03-16T13:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 70,
+    "fields": {
+      "id_ride": 35,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-03-16T15:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 71,
+    "fields": {
+      "id_ride": 36,
+      "description": "Status changed to pickup",
+      "created_at": "2024-03-18T14:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 72,
+    "fields": {
+      "id_ride": 36,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-03-18T16:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 73,
+    "fields": {
+      "id_ride": 37,
+      "description": "Status changed to pickup",
+      "created_at": "2024-03-20T15:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 74,
+    "fields": {
+      "id_ride": 37,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-03-20T18:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 75,
+    "fields": {
+      "id_ride": 38,
+      "description": "Status changed to pickup",
+      "created_at": "2024-03-22T16:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 76,
+    "fields": {
+      "id_ride": 38,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-03-22T17:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 77,
+    "fields": {
+      "id_ride": 39,
+      "description": "Status changed to pickup",
+      "created_at": "2024-04-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 78,
+    "fields": {
+      "id_ride": 39,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-04-02T07:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 79,
+    "fields": {
+      "id_ride": 40,
+      "description": "Status changed to pickup",
+      "created_at": "2024-04-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 80,
+    "fields": {
+      "id_ride": 40,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-04-04T08:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 81,
+    "fields": {
+      "id_ride": 41,
+      "description": "Status changed to pickup",
+      "created_at": "2024-04-06T08:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 82,
+    "fields": {
+      "id_ride": 41,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-04-06T10:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 83,
+    "fields": {
+      "id_ride": 42,
+      "description": "Status changed to pickup",
+      "created_at": "2024-04-08T09:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 84,
+    "fields": {
+      "id_ride": 42,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-04-08T11:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 85,
+    "fields": {
+      "id_ride": 43,
+      "description": "Status changed to pickup",
+      "created_at": "2024-04-10T10:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 86,
+    "fields": {
+      "id_ride": 43,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-04-10T13:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 87,
+    "fields": {
+      "id_ride": 44,
+      "description": "Status changed to pickup",
+      "created_at": "2024-04-12T11:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 88,
+    "fields": {
+      "id_ride": 44,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-04-12T12:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 89,
+    "fields": {
+      "id_ride": 45,
+      "description": "Status changed to pickup",
+      "created_at": "2024-04-14T12:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 90,
+    "fields": {
+      "id_ride": 45,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-04-14T13:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 91,
+    "fields": {
+      "id_ride": 46,
+      "description": "Status changed to pickup",
+      "created_at": "2024-04-02T06:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 92,
+    "fields": {
+      "id_ride": 46,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-04-02T07:15:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 93,
+    "fields": {
+      "id_ride": 47,
+      "description": "Status changed to pickup",
+      "created_at": "2024-04-04T07:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 94,
+    "fields": {
+      "id_ride": 47,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-04-04T08:45:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 95,
+    "fields": {
+      "id_ride": 48,
+      "description": "Status changed to pickup",
+      "created_at": "2024-04-06T08:00:00Z"
+    }
+  },
+  {
+    "model": "rides.rideevent",
+    "pk": 96,
+    "fields": {
+      "id_ride": 48,
+      "description": "Status changed to dropoff",
+      "created_at": "2024-04-06T10:15:00Z"
     }
   }
 ]
