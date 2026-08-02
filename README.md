@@ -113,7 +113,10 @@ python manage.py create_admin <the username you just created>
 # 7. (Optional) Seed sample data
 python manage.py loaddata rides/fixtures/sample_data.json
 
-# 8. Run the server
+# 8. (Optional) Use this for live demos, it computes every date relative to whenever you actually run it
+python manage.py seed_demo_data --flush
+
+# 9. Run the server
 python manage.py runserver
 ```
 
